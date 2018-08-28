@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/chartist.min.css">
+	<script src="js/chartist.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="wrapper">
+	<div>
+		<div class="row">
+<div class="left_panel col-md-1">
+	<div id="nav-icon1">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+</div>
+<div class="content_panel col-md-11">
+	<div class="stats col-md-6">
+		<div class="logo">psdrepo.com</div>
+		<div class="prodover">
+		<span>Productivity overview</span>
+		<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <a class="nav-item nav-link active" id="nav-today-tab" data-toggle="tab" href="#nav-today" role="tab" aria-controls="nav-today" aria-selected="true">Today</a>
+    <a class="nav-item nav-link" id="nav-week-tab" data-toggle="tab" href="#nav-week" role="tab" aria-controls="nav-week" aria-selected="false">Week</a>
+    <a class="nav-item nav-link" id="nav-month-tab" data-toggle="tab" href="#nav-month" role="tab" aria-controls="nav-month" aria-selected="false">Month</a>
+    <a class="nav-item nav-link" id="nav-year-tab" data-toggle="tab" href="#nav-year" role="tab" aria-controls="nav-year" aria-selected="false">Year</a>
+  </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-today" role="tabpanel" aria-labelledby="nav-today-tab">
+	<div class="circle desine col-md-4">74%</div>
+	<div class="circle frontend col-md-4">46%</div>
+	<div class="circle backend col-md-4">62%</div>
+	
+  </div>
+  <div class="tab-pane fade" id="nav-week" role="tabpanel" aria-labelledby="nav-week-tab">
+	<div class="circle desine col-md-4">4%</div>
+	<div class="circle frontend col-md-4">40%</div>
+	<div class="circle backend col-md-4">32%</div>
+  </div>
+  <div class="tab-pane fade" id="nav-month" role="tabpanel" aria-labelledby="nav-month-tab">
+  	<div class="circle desine col-md-4">91%</div>
+	<div class="circle frontend col-md-4">88%</div>
+	<div class="circle backend col-md-4">25%</div></div>
+  <div class="tab-pane fade" id="nav-year" role="tabpanel" aria-labelledby="nav-year-tab">
+  <div class="circle desine col-md-4">70%</div>
+	<div class="circle frontend col-md-4">15%</div>
+	<div class="circle backend col-md-4">69%</div></div>
+</div>
+	</div>
+	<!--div class="chart2 ct-chart ct-golden-section">1</div-->
+	</div>
+	<div class="time_spend col-md-3"></div>
+	<div class="team col-md-3"></div>
+</div>
+</div>
+</div>
+</div>
+	
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+    $('#nav-icon1').click(function(){
+        $(this).toggleClass('open');
+    });
+});
+	var Circle = function(sel){
+    var circles = document.querySelectorAll(sel);
+    [].forEach.call(circles,function(el){
+        var valEl = parseFloat(el.innerHTML);
+        valEl = valEl*408/100;
+        el.innerHTML = '<figure><svg width="160" height="160"><circle transform="rotate(-90)" r="65" cx="-80" cy="80" /><circle transform="rotate(-90)" style="stroke-dasharray:'+valEl+'px 408px;" r="65" cx="-80" cy="80" /><text  x="50%" y="50%" alignment-baseline="middle" text-anchor="middle">'+el.innerHTML+'</text></svg><figcaption></figcaption></figure>';
+        
+    });
+};
+Circle('.circle');
+</script>
+<script>
+new Chartist.Line('.chart2', {
+    labels: ['День 1', 'День 2', 'День 3', 'День 4', 'День 5'],
+        series: [
+            [12, 9, 3, 8, 4],
+             [2, 1, 4.7, 5.5, 8]
+        ]
+    }, {
+        fullWidth: true,
+        chartPadding: {
+            right: 50
+        }
+});
+</script>
+</html>
