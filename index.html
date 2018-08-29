@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/chartist.min.css">
+    <link rel="stylesheet" href="css/fontello.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="js/chartist.min.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -61,7 +62,32 @@
 	</div>
 
 	</div>
-	<div class="time_spend col-md-3"></div>
+	<div class="time_spend col-md-3">
+        <div class="time">
+            <div class="hour">
+                <div class="htime">23.5<sup>h</sup><br><span>Desine</span></div>
+                <div class="arrowA"><i class="demo-icon icon-right-small"></i>4% <br><span>above avg.</span></div>
+            </div>
+            <div class="hour">
+                <div class="htime">38<sup>h</sup><br><span>Front-end</span></div>
+                <div class="arrowU"><i class="demo-icon icon-right-small"></i>7%<br><span>under avg.</span></div>
+            </div>
+            <div class="hour">
+                <div class="htime">45.5<sup>h</sup><br><span>Back-end</span></div>
+                <div class="arrowA"><i class="demo-icon icon-right-small"></i>2%<br><span>above avg.</span></div>
+            </div>
+            <div class="hour">
+                <div class="htime">107<sup>h</sup><br><span>Total hours</span></div>
+                <div class="arrowU"><i class="demo-icon icon-right-small"></i>1%<br><span>under avg.</span></div>
+            </div>
+            
+        </div>
+        <div class="deadline">
+            <figure>
+                <svg width="260" height="260"><circle transform="rotate(-90)" style="stroke-dasharray:204px 408px;" r="65" cx="-80" cy="80" /><circle transform="rotate(-90)" style="stroke-dasharray:180px 408px;" r="65" cx="-80" cy="80" /></svg>
+            </figure>
+        </div>
+    </div>
 	<div class="team col-md-3"></div>
 </div>
 </div>
@@ -87,10 +113,7 @@
 Circle('.circle');
 </script>
 <script>
-    var options = {
-        width: 300,
-        height: 200
-    };
+
     var chart = new Chartist.Line('.ct-chart', {
     labels: ['8:00', '9:30', '11:00', '12:30', '14:00', '15:30', '17:00', '18:30'],
     series: [
