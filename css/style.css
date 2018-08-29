@@ -185,13 +185,13 @@ figcaption{
 	color: #838f9d;
 	font-size: 18px;
 }
-.ct-series-a .ct-area, .ct-series-a .ct-slice-donut-solid, .ct-series-a .ct-slice-pie{
+.ct-chart .ct-series-a .ct-area, .ct-chart .ct-series-a .ct-slice-donut-solid, .ct-chart .ct-series-a .ct-slice-pie{
     fill: #3b4a5e;
 }
-.ct-series-b .ct-area, .ct-series-b .ct-slice-donut-solid, .ct-series-b .ct-slice-pie{
+.ct-chart .ct-series-b .ct-area, .ct-chart .ct-series-b .ct-slice-donut-solid, .ct-chart .ct-series-b .ct-slice-pie{
     fill: #43556b;
 }
-.ct-series-a .ct-bar, .ct-series-a .ct-line, .ct-series-a .ct-point, .ct-series-a .ct-slice-donut{
+v .ct-series-a .ct-bar, .ct-chart .ct-series-a .ct-line, .ct-chart .ct-series-a .ct-point, .ct-chart .ct-series-a .ct-slice-donut{
   animation: width-pulse 3s infinite;
     stroke-width: 8px;
 }
