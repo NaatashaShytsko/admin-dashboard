@@ -14,8 +14,7 @@ body{
 
 .wrapper{
 	background: url(../img/back.png) no-repeat;
-	background-size: cover; 
-	height: 1000px;
+	background-size: cover;
 	padding: 3% 0;
 	display: block;
 }
@@ -133,11 +132,9 @@ body{
 	margin-top: 8%;
 }
 .circle {
-    display: block;
-    float: left;
+    display: inline-block;
     text-align: center;
-
-
+    margin: 20px -2px;
 }
 circle {
   fill: rgba(0,0,0,0);
@@ -188,29 +185,48 @@ figcaption{
 	color: #838f9d;
 	font-size: 18px;
 }
-.chart2.ct-chart .ct-series.ct-series-a .ct-line {
-    stroke: #6765B5;
-    stroke-width: 5px;
-    animation: width-pulse 2s infinite;
+.ct-series-a .ct-area, .ct-series-a .ct-slice-donut-solid, .ct-series-a .ct-slice-pie{
+    fill: #3b4a5e;
 }
- 
-/*Цвет точки для второй линии на графике*/
-.chart2.ct-chart .ct-series.ct-series-a .ct-point{
-    stroke: #403CB5;
+.ct-series-b .ct-area, .ct-series-b .ct-slice-donut-solid, .ct-series-b .ct-slice-pie{
+    fill: #43556b;
 }
- 
-/*Анимация пульсации для выделения линии на графике*/
+.ct-series-a .ct-bar, .ct-series-a .ct-line, .ct-series-a .ct-point, .ct-series-a .ct-slice-donut{
+  animation: width-pulse 3s infinite;
+    stroke-width: 8px;
+}
+.ct-series-b .ct-bar, .ct-series-b .ct-line, .ct-series-b .ct-point, .ct-series-b .ct-slice-donut{
+    stroke: none;
+}
+
+ .ct-grid {
+    stroke: #3b495a;
+     stroke-width: 2px;
+     stroke-dasharray: 0;
+}
+ .ct-label {
+     font-family: 'Melbourne', sans-serif;
+     margin-left: -20px;
+     color: #d2d6db;
+     font-size: 16px;
+ }
 @keyframes width-pulse {
     0% {
-        stroke-width: 6px;
-        stroke: #403CB5;
+        stroke: #ffc875;
+    }
+    25% {
+        stroke: #f3595b;
     }
     50% {
-        stroke-width: 14px;
-        stroke: #E40DE4;
+        stroke: #83d7c0;
+    }
+    75% {
+        stroke: #f3595b;
     }
     100% {
-        stroke-width: 6px;
-        stroke: #403CB5;
+        stroke: #ffc875;
     }
+}
+.ct-golden-section:before{
+    padding-bottom: 40%;
 }

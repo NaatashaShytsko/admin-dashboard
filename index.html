@@ -5,9 +5,9 @@
 	<title>Document</title>
 
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/chartist.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="js/chartist.min.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -42,7 +42,6 @@
 	<div class="circle desine col-md-4">74%</div>
 	<div class="circle frontend col-md-4">46%</div>
 	<div class="circle backend col-md-4">62%</div>
-	
   </div>
   <div class="tab-pane fade" id="nav-week" role="tabpanel" aria-labelledby="nav-week-tab">
 	<div class="circle desine col-md-4">4%</div>
@@ -58,8 +57,9 @@
 	<div class="circle frontend col-md-4">15%</div>
 	<div class="circle backend col-md-4">69%</div></div>
 </div>
+            <div class="ct-chart ct-golden-section"></div>
 	</div>
-	<!--div class="chart2 ct-chart ct-golden-section">1</div-->
+
 	</div>
 	<div class="time_spend col-md-3"></div>
 	<div class="team col-md-3"></div>
@@ -87,17 +87,41 @@
 Circle('.circle');
 </script>
 <script>
-new Chartist.Line('.chart2', {
-    labels: ['День 1', 'День 2', 'День 3', 'День 4', 'День 5'],
-        series: [
-            [12, 9, 3, 8, 4],
-             [2, 1, 4.7, 5.5, 8]
-        ]
-    }, {
-        fullWidth: true,
-        chartPadding: {
-            right: 50
-        }
+    var options = {
+        width: 300,
+        height: 200
+    };
+    var chart = new Chartist.Line('.ct-chart', {
+    labels: ['8:00', '9:30', '11:00', '12:30', '14:00', '15:30', '17:00', '18:30'],
+    series: [
+        [18, 14, 15, 11, 18, 15, 12, 15],
+        [16, 12, 13, 9, 16, 13, 10, 13]
+    ]
+}, {
+    low: 0,
+    showArea: true,
+    showPoint: false,
+        height: 300,
+    axisY: {
+        showLabel: false,
+        showGrid: false
+    }
 });
+
+
+chart.on('draw', function(data) {
+    if(data.type === 'line' || data.type === 'area') {
+        data.element.animate({
+            d: {
+                begin: 2000 * data.index,
+                dur: 2000,
+                from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
+                to: data.path.clone().stringify(),
+                easing: Chartist.Svg.Easing.easeOutQuint
+            }
+        });
+    }
+});
+
 </script>
 </html>
