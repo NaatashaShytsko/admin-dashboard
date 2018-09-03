@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Document</title>
 
 	<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -16,16 +17,13 @@
 </head>
 <body>
 <div class="wrapper">
-	<div>
-		<div class="row">
 
 
     <ul class="navigation">
-        <li class="nav-item"><a href="#">Главная</a></li>
-        <li class="nav-item"><a href="#">Портфолио</a></li>
-        <li class="nav-item"><a href="#">О нас</a></li>
-        <li class="nav-item"><a href="#">Блог</a></li>
-        <li class="nav-item"><a href="#">Контакты</a></li>
+        <li class="nav-item"><a href="#">Home</a></li>
+        <li class="nav-item"><a href="#">About</a></li>
+        <li class="nav-item"><a href="#">Blog</a></li>
+        <li class="nav-item"><a href="#">Contacts</a></li>
     </ul>
 
     <input type="checkbox" id="nav-trigger" class="nav-trigger" />
@@ -37,8 +35,11 @@
                     <span></span>
                 </div>
             </label>
-<div class="content_panel site-wrap col-md-12">
-	<div class="stats col-md-6">
+    <div class="container site-wrap">
+        <div class="row">
+
+        <div class="content_panel col-lg-12">
+	<div class="stats col-md-12 col-lg-6">
 		<div class="logo">psdrepo.com</div>
 		<div class="prodover">
 		<span>Productivity overview</span>
@@ -74,7 +75,7 @@
 	</div>
 
 	</div>
-	<div class="time_spend col-md-3">
+	<div class="time_spend col-md-6  col-lg-3">
         <div class="time">
             <div class="hour">
                 <div class="htime">23.5<sup>h</sup><br><span>Desine</span></div>
@@ -104,7 +105,7 @@
         </div>
 
     </div>
-	<div class="team col-md-3">
+	<div class="team col-md-6 col-lg-3">
 
         <div><h1>Team</h1>
         <h2>The Weborati</h2></div>
@@ -156,7 +157,7 @@
 </div>
 </div>
 </div>
-	
+
 </body>
 <script type="text/javascript">
 	$(document).ready(function(){
@@ -170,7 +171,7 @@
         var valEl = parseFloat(el.innerHTML);
         valEl = valEl*408/100;
         el.innerHTML = '<figure><svg width="160" height="160"><circle transform="rotate(-90)" r="65" cx="-80" cy="80" /><circle transform="rotate(-90)" style=" stroke-dasharray:'+valEl+'px 408px;" r="65" cx="-80" cy="80" /><text  x="50%" y="50%" alignment-baseline="middle" text-anchor="middle">'+el.innerHTML+'</text></svg><figcaption></figcaption></figure>';
-        
+
     });
 };
 Circle('.circle');
