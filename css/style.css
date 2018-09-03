@@ -577,10 +577,18 @@ figcaption{
     .stats .prodover span{
         font-size: 14px;
     }
+    .time_spend, .team{
+        height: 50%;
+    }
 }
 @media (max-width: 768px) {
     .time_spend{
         margin-top: 10%;
+    }
+}
+@media (max-width: 540px) {
+    .time_spend{
+        margin-top: 40%;
     }
 }
 @media all and (-ms-high-contrast:none){
