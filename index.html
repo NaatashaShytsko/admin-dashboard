@@ -1,214 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Document</title>
+    <title>Admin Dashboard</title>
 
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/chartist.min.css">
     <link rel="stylesheet" href="css/fontello.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-	<script src="js/chartist.min.js"></script>
+    <script src="js/chartist.min.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
 
 </head>
 <body>
 <div class="wrapper">
-
-
     <ul class="navigation">
         <li class="nav-item"><a href="#">Home</a></li>
         <li class="nav-item"><a href="#">About</a></li>
         <li class="nav-item"><a href="#">Blog</a></li>
         <li class="nav-item"><a href="#">Contacts</a></li>
     </ul>
-
-    <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-
-            <label for="nav-trigger" class="left_panel">
-                <div id="nav-icon1">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </label>
+    <input type="checkbox" id="nav-trigger" class="nav-trigger"/>
+    <label for="nav-trigger" class="left_panel">
+        <div id="nav-icon1">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </label>
     <div class="container site-wrap">
         <div class="row">
-
-        <div class="content_panel col-lg-12">
-	<div class="stats col-md-12 col-lg-6">
-		<div class="logo">psdrepo.com</div>
-		<div class="prodover">
-		<span>Productivity overview</span>
-		<nav>
-  <div class="nav nav-tabs" id="nav-tab" role="tablist">
-    <a class="nav-item nav-link active" id="nav-today-tab" data-toggle="tab" href="#nav-today" role="tab" aria-controls="nav-today" aria-selected="true">Today</a>
-    <a class="nav-item nav-link" id="nav-week-tab" data-toggle="tab" href="#nav-week" role="tab" aria-controls="nav-week" aria-selected="false">Week</a>
-    <a class="nav-item nav-link" id="nav-month-tab" data-toggle="tab" href="#nav-month" role="tab" aria-controls="nav-month" aria-selected="false">Month</a>
-    <a class="nav-item nav-link" id="nav-year-tab" data-toggle="tab" href="#nav-year" role="tab" aria-controls="nav-year" aria-selected="false">Year</a>
-  </div>
-</nav>
-<div class="tab-content" id="nav-tabContent">
-  <div class="tab-pane fade show active" id="nav-today" role="tabpanel" aria-labelledby="nav-today-tab">
-	<div class="circle desine col-md-4">74%</div>
-	<div class="circle frontend col-md-4">46%</div>
-	<div class="circle backend col-md-4">62%</div>
-  </div>
-  <div class="tab-pane fade" id="nav-week" role="tabpanel" aria-labelledby="nav-week-tab">
-	<div class="circle desine col-md-4">4%</div>
-	<div class="circle frontend col-md-4">40%</div>
-	<div class="circle backend col-md-4">32%</div>
-  </div>
-  <div class="tab-pane fade" id="nav-month" role="tabpanel" aria-labelledby="nav-month-tab">
-  	<div class="circle desine col-md-4">91%</div>
-	<div class="circle frontend col-md-4">88%</div>
-	<div class="circle backend col-md-4">25%</div></div>
-  <div class="tab-pane fade" id="nav-year" role="tabpanel" aria-labelledby="nav-year-tab">
-  <div class="circle desine col-md-4">70%</div>
-	<div class="circle frontend col-md-4">15%</div>
-	<div class="circle backend col-md-4">69%</div></div>
-</div>
-            <div class="chart"><div class="ct-chart ct-golden-section"></div></div>
-	</div>
-
-	</div>
-	<div class="time_spend col-md-6  col-lg-3">
-        <div class="time">
-            <div class="hour">
-                <div class="htime">23.5<sup>h</sup><br><span>Desine</span></div>
-                <div class="arrowA"><i class="demo-icon icon-right-small"></i>4% <br><span>above avg.</span></div>
-            </div>
-            <div class="hour">
-                <div class="htime">38<sup>h</sup><br><span>Front-end</span></div>
-                <div class="arrowU"><i class="demo-icon icon-right-small"></i>7%<br><span>under avg.</span></div>
-            </div>
-            <div class="hour">
-                <div class="htime">45.5<sup>h</sup><br><span>Back-end</span></div>
-                <div class="arrowA"><i class="demo-icon icon-right-small"></i>2%<br><span>above avg.</span></div>
-            </div>
-            <div class="hour">
-                <div class="htime">107<sup>h</sup><br><span>Total hours</span></div>
-                <div class="arrowU"><i class="demo-icon icon-right-small"></i>1%<br><span>under avg.</span></div>
-            </div>
-            
-        </div>
-        <div class="deadline">
-            <div class="htime">1<sup>d</sup> 2<sup>h</sup></div>
-            <br> <span>Until Deadline</span>
-            <div class="progress">
-
-                <div class="progress-bg"><div class="progress-bar"></div></div>
-            </div>
-        </div>
-
-    </div>
-	<div class="team col-md-6 col-lg-3">
-
-        <div><h1>Team</h1>
-        <h2>The Weborati</h2></div>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                   <div>
-                       <div><div class="img-1"></div>
-                       <div class="img-2"></div></div>
-                   <div> <div class="img-3"></div>
-                    <div class="img-4"></div></div>
-                   <div> <div class="img-5"></div>
-                    <div class="img-6"></div></div>
-                    <div><div class="img-7"></div>
-                    <div class="img-8"></div></div></div>
-            </div>
-                <div class="carousel-item">
-                    <div>
-                        <div><div class="img-1"></div>
-                            <div class="img-2"></div></div>
-                        <div> <div class="img-3"></div>
-                            <div class="img-4"></div></div>
-                        <div> <div class="img-5"></div>
-                            <div class="img-6"></div></div>
-                        <div><div class="img-7"></div>
-                            <div class="img-8"></div></div></div>
+            <div class="content_panel col-lg-12">
+                <div class="stats col-md-12 col-lg-6">
+                    <div class="logo">psdrepo.com</div>
+                    <div class="prodover">
+                        <span>Productivity overview</span>
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-today-tab" data-toggle="tab"
+                                   href="#nav-today" role="tab" aria-controls="nav-today" aria-selected="true">Today</a>
+                                <a class="nav-item nav-link" id="nav-week-tab" data-toggle="tab" href="#nav-week"
+                                   role="tab" aria-controls="nav-week" aria-selected="false">Week</a>
+                                <a class="nav-item nav-link" id="nav-month-tab" data-toggle="tab" href="#nav-month"
+                                   role="tab" aria-controls="nav-month" aria-selected="false">Month</a>
+                                <a class="nav-item nav-link" id="nav-year-tab" data-toggle="tab" href="#nav-year"
+                                   role="tab" aria-controls="nav-year" aria-selected="false">Year</a>
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-today" role="tabpanel"
+                                 aria-labelledby="nav-today-tab">
+                                <div class="circle desine col-md-4">74%</div>
+                                <div class="circle frontend col-md-4">46%</div>
+                                <div class="circle backend col-md-4">62%</div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-week" role="tabpanel" aria-labelledby="nav-week-tab">
+                                <div class="circle desine col-md-4">4%</div>
+                                <div class="circle frontend col-md-4">40%</div>
+                                <div class="circle backend col-md-4">32%</div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-month" role="tabpanel" aria-labelledby="nav-month-tab">
+                                <div class="circle desine col-md-4">91%</div>
+                                <div class="circle frontend col-md-4">88%</div>
+                                <div class="circle backend col-md-4">25%</div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-year" role="tabpanel" aria-labelledby="nav-year-tab">
+                                <div class="circle desine col-md-4">70%</div>
+                                <div class="circle frontend col-md-4">15%</div>
+                                <div class="circle backend col-md-4">69%</div>
+                            </div>
+                        </div>
+                        <div class="chart">
+                            <div class="ct-chart ct-golden-section"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <div>
-                        <div><div class="img-1"></div>
-                            <div class="img-2"></div></div>
-                        <div> <div class="img-3"></div>
-                            <div class="img-4"></div></div>
-                        <div> <div class="img-5"></div>
-                            <div class="img-6"></div></div>
-                        <div><div class="img-7"></div>
-                            <div class="img-8"></div></div></div>
+                <div class="time_spend col-md-6  col-lg-3">
+                    <div class="time">
+                        <div class="hour">
+                            <div class="htime">23.5<sup>h</sup><br><span>Desine</span></div>
+                            <div class="arrowA"><i class="demo-icon icon-right-small"></i>4% <br><span>above avg.</span>
+                            </div>
+                        </div>
+                        <div class="hour">
+                            <div class="htime">38<sup>h</sup><br><span>Front-end</span></div>
+                            <div class="arrowU"><i class="demo-icon icon-right-small"></i>7%<br><span>under avg.</span>
+                            </div>
+                        </div>
+                        <div class="hour">
+                            <div class="htime">45.5<sup>h</sup><br><span>Back-end</span></div>
+                            <div class="arrowA"><i class="demo-icon icon-right-small"></i>2%<br><span>above avg.</span>
+                            </div>
+                        </div>
+                        <div class="hour">
+                            <div class="htime">107<sup>h</sup><br><span>Total hours</span></div>
+                            <div class="arrowU"><i class="demo-icon icon-right-small"></i>1%<br><span>under avg.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deadline">
+                        <div class="htime">1<sup>d</sup> 2<sup>h</sup></div>
+                        <br> <span>Until Deadline</span>
+                        <div class="progress">
+                            <div class="progress-bg">
+                                <div class="progress-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team col-md-6 col-lg-3">
+                    <div><h1>Team</h1>
+                        <h2>The Weborati</h2></div>
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div>
+                                    <div>
+                                        <div class="img-1"></div>
+                                        <div class="img-2"></div>
+                                    </div>
+                                    <div>
+                                        <div class="img-3"></div>
+                                        <div class="img-4"></div>
+                                    </div>
+                                    <div>
+                                        <div class="img-5"></div>
+                                        <div class="img-6"></div>
+                                    </div>
+                                    <div>
+                                        <div class="img-7"></div>
+                                        <div class="img-8"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div>
+                                    <div>
+                                        <div class="img-1"></div>
+                                        <div class="img-2"></div>
+                                    </div>
+                                    <div>
+                                        <div class="img-3"></div>
+                                        <div class="img-4"></div>
+                                    </div>
+                                    <div>
+                                        <div class="img-5"></div>
+                                        <div class="img-6"></div>
+                                    </div>
+                                    <div>
+                                        <div class="img-7"></div>
+                                        <div class="img-8"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div>
+                                    <div>
+                                        <div class="img-1"></div>
+                                        <div class="img-2"></div>
+                                    </div>
+                                    <div>
+                                        <div class="img-3"></div>
+                                        <div class="img-4"></div>
+                                    </div>
+                                    <div>
+                                        <div class="img-5"></div>
+                                        <div class="img-6"></div>
+                                    </div>
+                                    <div>
+                                        <div class="img-7"></div>
+                                        <div class="img-8"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                    </div>
                 </div>
             </div>
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
         </div>
     </div>
 </div>
-</div>
-</div>
-</div>
-
+<script src="js/script.js"></script>
 </body>
-<script type="text/javascript">
-	$(document).ready(function(){
-    $('#nav-icon1').click(function(){
-        $(this).toggleClass('open');
-    });
-});
-	var Circle = function(sel){
-    var circles = document.querySelectorAll(sel);
-    [].forEach.call(circles,function(el){
-        var valEl = parseFloat(el.innerHTML);
-        valEl = valEl*408/100;
-        el.innerHTML = '<figure><svg width="160" height="160"><circle transform="rotate(-90)" r="65" cx="-80" cy="80" /><circle transform="rotate(-90)" style=" stroke-dasharray:'+valEl+'px 408px;" r="65" cx="-80" cy="80" /><text  x="50%" y="50%" alignment-baseline="middle" text-anchor="middle">'+el.innerHTML+'</text></svg><figcaption></figcaption></figure>';
-
-    });
-};
-Circle('.circle');
-</script>
-<script>
-
-    var chart = new Chartist.Line('.ct-chart', {
-    labels: ['8:00', '9:30', '11:00', '12:30', '14:00', '15:30', '17:00', '18:30'],
-    series: [
-        [18, 14, 15, 11, 18, 15, 12, 15],
-        [16, 12, 13, 9, 16, 13, 10, 13]
-    ]
-}, {
-    low: 0,
-    showArea: true,
-    showPoint: false,
-        height: 300,
-    axisY: {
-        showLabel: false,
-        showGrid: false
-    }
-});
-
-
-chart.on('draw', function(data) {
-    if(data.type === 'line' || data.type === 'area') {
-        data.element.animate({
-            d: {
-                begin: 2000 * data.index,
-                dur: 2000,
-                from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
-                to: data.path.clone().stringify(),
-                easing: Chartist.Svg.Easing.easeOutQuint
-            }
-        });
-    }
-});
-
-</script>
 </html>

@@ -5,7 +5,7 @@
 	src: url('../fonts/Melbourne_reg.eot') format('embedded-opentype'),
 	url('../fonts/Melbourne_reg.woff') format('woff');
 	font-weight: normal;
-	font-style: normal;
+    font-style: normal;
 }
 @font-face
 {
@@ -23,26 +23,15 @@ body{
 	font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
 }
-
-.wrapper{
-
-	display: block;
-
-}
 .wrapper .row{
     margin: 0;
     min-height: 100vh;
 }
-.left_panel, .content_panel{
+.content_panel{
     display: flex;
     flex-wrap: wrap;
 	padding: 0;
 }
-.left_panel{
-	padding-top: 15px;
-    padding: 3% 0;
-}
-
 /* Navigation Menu - Background */
 .navigation {
     /* critical sizing and position styles */
@@ -54,7 +43,6 @@ body{
     bottom: 0;
     left: 0;
     z-index: 0;
-    /* non-critical appearance styles */
     list-style: none;
     background: #111;
     padding-left: 0;
@@ -67,7 +55,6 @@ body{
 }
 
 .nav-item a {
-    /* non-critical appearance styles */
     display: block;
     padding: 1em;
     background: linear-gradient(135deg, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
@@ -82,46 +69,35 @@ body{
     background: linear-gradient(135deg, rgba(0,0,0,0) 0%,rgba(75,20,20,0.65) 100%);
 }
 .container {
-    background: url(../img/back.png) no-repeat;
-    background-size: cover;
     margin: 0;
 }
 /* Site Wrapper - Everything that isn't navigation */
 .site-wrap {
-    /* Critical position and size styles */
     min-height: 100%;
     min-width: 100%;
     background: url(../img/back.png) no-repeat;
-    background-size: cover; /* Needs a background or else the nav will show through */
+    background-size: cover;
     position: relative;
     top: 0;
     bottom: 100%;
     left: 0;
     z-index: 1;
-
 }
 
-/* Nav Trigger */
 .nav-trigger {
-    /* critical styles - hide the checkbox input */
     position: absolute;
     clip: rect(0, 0, 0, 0);
 }
 
 label[for="nav-trigger"] {
-    /* critical positioning styles */
     position: fixed;
     left: 25px;
     top: 15px;
     z-index: 2;
-
-    /* non-critical apperance styles */
     height: 30px;
     width: 55px;
     cursor: pointer;
 }
-
-/* Make the Magic Happen */
 .nav-trigger + label, .site-wrap {
     transition: left 0.2s;
 }
@@ -176,7 +152,7 @@ code {
 }
 
 #nav-icon1 span:nth-child(1) {
-  top: 0px;
+  top: 0;
 }
 
 #nav-icon1 span:nth-child(2) {
@@ -212,7 +188,7 @@ code {
 	display: inline-block;
 }
 .stats {
-    padding: 2% 1% 2% 6%;
+    padding: 2% 3% 2% 7%;
 }
 .stats .logo{
 	font-weight: bold;
@@ -255,11 +231,9 @@ code {
 circle {
   fill: rgba(0,0,0,0);
   stroke: #364559;
-  stroke-width: 15;
-  stroke-dasharray: 408px 408px;
+  stroke-width: 15px;
+  stroke-dasharray: 408px;
     animation: stroke-dasharray 4s;
-
-	
 }
 @keyframes dash {
   from {
@@ -271,7 +245,7 @@ circle {
 }
 circle:nth-child(2n) {
   fill: rgba(0,0,0,0);
-  stroke-width: 15;
+  stroke-width: 15px;
   stroke-linecap: round;
     animation: dash 1s;
 }
@@ -324,12 +298,14 @@ figcaption{
      stroke-width: 2px;
      stroke-dasharray: 0;
 }
+
  .ct-label {
      font-family: 'Melbourne', sans-serif;
      margin-left: -20px;
      color: #d2d6db;
      font-size: 16px;
  }
+
 @keyframes width-pulse {
     0% {
         stroke: #ffc875;
@@ -551,7 +527,7 @@ figcaption{
     background-color: #6d7989;
     border-radius: 50%;
     height: 10px;
-    left: 0px;
+    left: 0;
     margin-left: 8px;
     margin-right: 10px;
     width: 10px;
@@ -559,6 +535,18 @@ figcaption{
 .team .carousel-indicators .active
 {
     background-color: #83d7c0;
+}
+@media (max-width: 1200px) and (min-width: 992px){
+    svg{
+        width: 140px;
+        height: 140px;
+    }
+    circle{
+        cx: -70;
+        cy: 70;
+        r: 55;
+    }
+
 }
 @media (max-width: 992px) {
     .container{
@@ -579,18 +567,28 @@ figcaption{
     }
     .time_spend, .team{
         height: 50%;
+
     }
 }
+
 @media (max-width: 768px) {
-    .time_spend{
-        margin-top: 10%;
+    .time_spend, .team{
+        top: 4%;
     }
 }
 @media (max-width: 540px) {
     .time_spend{
         margin-top: 40%;
     }
+    .stats .prodover nav .nav-tabs a{
+        font-size: 11px;
+    }
+    .stats .logo{
+        font-size: 25px;
+        line-height: 46px;
+    }
 }
+
 @media all and (-ms-high-contrast:none){
     .time .hour{
         padding: 40px;
@@ -599,8 +597,6 @@ figcaption{
         padding: 25px;
     }
 }
-
-
 /*----MS Edge Browser CSS Start----*/
 @supports (-ms-ime-align: auto)  {
     .time .hour{
