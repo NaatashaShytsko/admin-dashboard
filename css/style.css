@@ -276,6 +276,10 @@ figcaption{
 	color: #838f9d;
 	font-size: 18px;
 }
+.chart{
+    overflow: -webkit-paged-x;
+    overflow: paged-x;
+}
 .ct-chart{
     margin-top: 5%;
 }
